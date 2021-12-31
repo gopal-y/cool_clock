@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Cool Clock",
+  "version": "1.0",
+  "content_security_policy": {
+      "extension_pages":"default-src 'self'; script-src 'self'"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["scripting", "activeTab"],
+  "action": {
+    "default_popup": "clock.html",
+    "default_icon": {}
+  },
+  "icons":{}
+}

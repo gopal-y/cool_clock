@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline'"
+    />
+    <link rel="stylesheet" href="./src/css/styles.css" />
+    <script type="text/javascript" src="./src/js/script.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="center">
+        <!-- <label class="toggle" for="toggle-input">
+        <input
+          type="checkbox"
+          class="toggle-input"
+          id="toggle-input"
+          name="toggle"
+          onchange="setToggle(event)"
+        />
+        <span class="toggle-slider"></span>
+      </label>
+      <br /> -->
+        <div class="outer-clock" id="analog">
+          <div class="clock-center"></div>
+          <div class="hand seconds" id="seconds"></div>
+          <div class="hand minutes" id="minutes"></div>
+          <div class="hand hours" id="hours"></div>
+        </div>
+        <div class="digital-clock" id="digital">
+          <div class="digital" id="digital-hours"></div>
+          <div class="seperate"></div>
+          <div class="digital" id="digital-minutes"></div>
+          <div class="seperate"></div>
+          <div class="digital" id="digital-seconds"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
