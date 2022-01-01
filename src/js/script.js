@@ -1,4 +1,5 @@
 window.onload = () => {
+  document.getElementById("menu").addEventListener("click", setToggle);
   const secondsHand = document.getElementById("seconds");
   const minutesHand = document.getElementById("minutes");
   const hoursHand = document.getElementById("hours");
@@ -6,7 +7,6 @@ window.onload = () => {
   const digitalHours = document.getElementById("digital-hours");
   const digitalMinutes = document.getElementById("digital-minutes");
   const digitalSeconds = document.getElementById("digital-seconds");
-
 
   function setTime() {
     const time = new Date();
@@ -32,11 +32,18 @@ window.onload = () => {
 };
 
 function setToggle(event) {
-  if (event.target.checked) {
-    document.getElementById("analog").style.display = "none";
-    document.getElementById("digital").style.display = "flex";
-  } else {
-    document.getElementById("digital").style.display = "none";
-    document.getElementById("analog").style.display = "block";
+  if (event.target.classList[0] === "tabs") {
+    event.stopPropagation();
+    return;
   }
+
+  // remove active
+  const tabs = document.getElementsByClassName("tab");
+  for (let i = 0; i < tabs.length; i++) {
+    if (tabs[i].classList.contains("active")) {
+      tabs[i].classList.remove("active");
+    }
+  }
+
+  event.target.classList.add("active");
 }
